@@ -79,3 +79,16 @@ vector<int> nalogi(Z);
 - std::vector<int> tax(artifact_count);
 
 &nbsp;
+
+6. Добавлена обработка исключений
+
+Добавлен блок:
+```C++
+try {
+    ...
+}
+catch (const std::exception& error) {
+    std::cout << "Ошибка: " << error.what() << std::endl;
+    return 1;
+}
+```

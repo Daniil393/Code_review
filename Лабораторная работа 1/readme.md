@@ -39,13 +39,13 @@ if (!file.is_open()) {
 lower_case_with_underscores. Также не все названия переменных отображали их смысл.
 
 Исправление:
-N -> artifact_count
-Z -> weight_limit
-wes -> weight
-nalogi -> tax
-maxWes -> max_weight
-wes1 -> weight1
-minNalog -> min_tax
-minNalogivalue -> min_tax_value
-totalwes -> total_weight
-selectart -> select_art
+    N -> artifact_count
+    Z -> weight_limit
+    wes -> weight
+    nalogi -> tax
+    maxWes -> max_weight
+    wes1 -> weight1
+    minNalog -> min_tax
+    minNalogivalue -> min_tax_value
+    totalwes -> total_weight
+    selectart -> select_art

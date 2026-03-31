@@ -341,4 +341,129 @@ using namespace std;
 
 &nbsp;
 
-2. 
+2. Обработка ошибки
+
+Проблема:
+Ошибка деления на ноль обрабатывалась через exit(1)
+```C++
+if (number == 0) {
+  std::cout << "ошибка при делении на ноль!" << std::endl;
+  exit(1);
+}
+```
+
+Исправление:
+Добавлена обработка через try / catch и std::runtime_error.
+```C++
+if (next_number == 0) {
+  throw std::runtime_error("Ошибка при делении на ноль!");
+}
+```
+
+&nbsp;
+
+3. Добавлена обработка исключений
+
+добавлен блок try-catch в функции main
+```C++
+try {
+...
+  }
+  catch (const std::exception& e) {
+    std::cerr << "Ошибка: " << e.what() << std::endl;
+    return 1;
+  }
+```
+
+&nbsp;
+
+4. Несоответствие имен переменных и функций стилю
+
+Проблема:
+По код-стайлу переменные и функции должны использовать стиль
+lower_case_with_underscores. Также не все названия переменных отображали их смысл.
+
+Исправление:
+ - int NumRead(...); -> int number_read(...);
+ - int CalculateTerm(...); -> int calculate_term(...);
+ - int CalculateS(...); -> int calculate_s(...);
+ - int currentNumber -> int current_number
+ - char znak -> char operator_char
+
+&nbsp;
+
+5. Несоответствие условию задания
+
+Проблема:
+В функциях calculate_term и calculate_s использовался цикл while.
+
+Исправление:
+```C++
+int calculate_term(std::string& s, int& symb) {
+  int value = number_read(s, symb);
+
+  if (symb < s.length() && (s[symb] == '*' || s[symb] == '/')) {
+
+    char operator_char = s[symb];
+
+    symb++;
+    int next_number = calculate_term(s, symb);
+
+    if (operator_char == '*') {
+      return value * next_number;
+    }
+
+    else {
+      if (next_number == 0) {
+        throw std::runtime_error("Ошибка при делении на ноль!");
+      }
+      return value / next_number;
+    }
+  }
+
+  return value;
+}
+```
+
+```C++
+int calculate_s(std::string& s, int& symb) {
+  int value = calculate_term(s, symb);
+
+  if (symb < s.length() && (s[symb] == '+' || s[symb] == '-')) {
+
+    char operator_char = s[symb];
+
+    symb++;
+    int next_term = calculate_s(s, symb);
+
+    if (operator_char == '+') {
+      value += next_term;
+    }
+
+    else {
+      value -= next_term;
+    }
+  }
+
+  return value;
+}
+```
+
+&nbsp;
+
+6. Объявление, вывод и ввод записанны в одну строку
+
+нужно разделить объявление переменной, вывод сообщения и считывание ввода на отдельные строки.
+Также записать переменную S так чтобы она соответствовала стилю lower_case_with_underscores.
+
+Исходный вариант:
+```C++
+std::string S; std::cout << "Введите выражение -> "; std::getline(std::cin, S);
+```
+
+Исправление:
+```C++
+std::string s;
+std::cout << "Введите выражение -> ";
+std::getline(std::cin, s);
+```

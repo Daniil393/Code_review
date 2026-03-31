@@ -230,13 +230,13 @@ kichnye ->  count_k_base_numbers
 3. Имена переменных не отображают их смысл
 
 Исправление:
-nz -> non_zero_end
-oz -> one_zero_end
-tz -> two_zero_end
-nz_ -> new_non_zero_end
-oz_ -> new_one_zero_end
-tz_ -> new_two_zero_end
-bebe -> result
+ - nz -> non_zero_end
+ - oz -> one_zero_end
+ - tz -> two_zero_end
+ - nz_ -> new_non_zero_end
+ - oz_ -> new_one_zero_end
+ - tz_ -> new_two_zero_end
+ - bebe -> result
 
 &nbsp;
 

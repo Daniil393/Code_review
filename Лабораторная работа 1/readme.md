@@ -20,10 +20,10 @@ using namespace std;
 Проблема:
 Ошибка открытия файла обрабатывалась через код возврата
 ```C++
-if (!file.is_open()) {
-    cout << "Файл не открылся!!";
+  if (!read_file("file.txt", artifact_count, weight_limit, weight, tax)) {
+    std::cout << "Файл не открылся!!";
     return 1;
-}
+  }
 ```
 
 Исправление:

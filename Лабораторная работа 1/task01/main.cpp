@@ -44,7 +44,7 @@ int main() {
     std::cout << index << " ";
   }
 
-  std::cout << "\nСуммарный вес: " << total_weight << " кг";
+  std::cout << "\nСуммарный вес: " << total_weight;
   std::cout << "\nОбщая ценность: " << min_tax_value << std::endl;
 
   return 0;

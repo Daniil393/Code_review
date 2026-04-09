@@ -82,6 +82,32 @@ catch (const std::exception& error) {
 
 &nbsp;
 
+6. Исправление восстановления артефактов
+
+Добавлен массив take[i][w] для корректного восстановления предметов.
+Также проверяется переполнение при расчёте нового налога:
+обновление min_tax[w] происходит только если новое значение меньше.
+
+```C++
+  std::vector<std::vector<bool>> take(artifact_count, std::vector<bool>(max_weight + 1, false));
+
+  for (int i = 0; i < artifact_count; i++) {
+    for (int w = max_weight; w >= weight[i]; w--) {
+      if (min_tax[w - weight[i]] != std::numeric_limits<int>::max()) {
+
+        int new_tax = min_tax[w - weight[i]] + tax[i];
+
+        if (new_tax < min_tax[w]) {
+          min_tax[w] = new_tax;
+          take[i][w] = true;
+        }
+      }
+    }
+  }
+```
+
+&nbsp;
+
 > Задание №2
 1. Использование using namespace std
 

@@ -21,31 +21,48 @@ using namespace std;
 
 int main() {
 
-  SetConsoleOutputCP(CP_UTF8);
-  SetConsoleCP(CP_UTF8);
+  SetConsoleCP(1251);
+  SetConsoleOutputCP(1251);
 
-  int artifact_count, weight_limit;
-  std::vector<int> weight;
-  std::vector<int> tax;
+  /*
+  FIX_ME: Исключения выбрасываются, но не перехватываются.
+  Необходимо использовать try-catch в main
+  */
+  try {
+    int artifact_count, weight_limit;
+    std::vector<int> weight;
+    std::vector<int> tax;
 
-  if (!read_file("file.txt", artifact_count, weight_limit, weight, tax)) {
-    std::cout << "Файл не открылся!!";
+    /*
+    FIX_ME: ошибка выкидывалась через return 1.
+
+    if (!read_file("file.txt", artifact_count, weight_limit, weight, tax)) {
+      std::cout << "Файл не открылся!!";
+      return 1;
+      }
+    */
+    if (!read_file("file.txt", artifact_count, weight_limit, weight, tax)) {
+      throw std::runtime_error("Файл не открылся");
+    }
+
+    std::vector<int> select_art;
+    int total_weight = 0;
+    int min_tax_value = 0;
+
+    solve(artifact_count, weight_limit, weight, tax, select_art, total_weight, min_tax_value);
+
+    std::cout << "Индексы артефактов: ";
+    for (int index : select_art) {
+      std::cout << index << " ";
+    }
+
+    std::cout << "\nСуммарный вес: " << total_weight;
+    std::cout << "\nОбщая ценность: " << min_tax_value << std::endl;
+  }
+  catch (const std::exception& e) {
+    std::cout << e.what() << std::endl;
     return 1;
   }
-
-  std::vector<int> select_art;
-  int total_weight = 0;
-  int min_tax_value = 0;
-
-  solve(artifact_count, weight_limit, weight, tax, select_art, total_weight, min_tax_value);
-
-  std::cout << "Индексы артефактов: ";
-  for (int index : select_art) {
-    std::cout << index << " ";
-  }
-
-  std::cout << "\nСуммарный вес: " << total_weight;
-  std::cout << "\nОбщая ценность: " << min_tax_value << std::endl;
 
   return 0;
 }

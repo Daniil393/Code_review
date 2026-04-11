@@ -29,9 +29,9 @@ using namespace std;
 Исправление:
 Добавлена обработка через try / catch и std::runtime_error.
 ```C++
-if (!file.is_open()) {
-    throw std::runtime_error("Файл не открылся");
-}
+    if (!read_file("file.txt", artifact_count, weight_limit, weight, tax)) {
+      throw std::runtime_error("Файл не открылся");
+    }
 ```
 
 &nbsp;

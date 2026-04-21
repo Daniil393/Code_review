@@ -434,7 +434,108 @@ if (bulletsToLoad < 0) {
 
 > 7) public class Point.
 
-**1. Изменение класса**
+**1. Изменение полей**
+Класс не является неизменяемым. Нужно сделать поля final.
+&nbsp;
+
+Старый код:
+```Java
+private double x;
+private double y;
+```
 
 &nbsp;
 
+Исправление:
+```Java
+private final double x;
+private final double y;
+```
+
+&nbsp;
+
+**2.Отсутствуют фигурные скобки в if.**
+
+&nbsp;
+
+Старый код:
+```Java
+        if (this == obj) return true;
+        if (!(obj instanceof Point)) return false;
+```
+
+&nbsp;
+
+Исправление:
+```Java
+       if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof Point)) {
+            return false;
+        }
+```
+
+&nbsp;
+
+**3. Переопределение метода**
+
+Переопределён equals(), но не переопределён hashCode().
+Нарушение контракта equals/hashCode.
+
+&nbsp;
+
+Добавлено:
+```Java
+    @Override
+    public int hashCode() {
+        return Double.hashCode(x) * 31 + Double.hashCode(y);
+    }
+```
+
+&nbsp;
+
+> 8) public class TelephoneDirectory
+
+**1.импорт библиотеки**
+
+Необходимо явно импортировать используемые классы.
+
+&nbsp;
+
+Старый код:
+```Java
+import java.util.*;
+```
+
+&nbsp;
+
+Исправление:
+```Java
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+```
+
+&nbsp;
+
+> 9) public class Main
+
+**1.импорт библиотеки**
+
+Необходимо явно импортировать используемые классы.
+
+&nbsp;
+
+Старый код:
+```Java
+import java.util.*;
+```
+
+&nbsp;
+
+Исправление:
+```Java
+import java.util.Scanner;
+import java.util.Arrays;
+```

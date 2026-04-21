@@ -2,6 +2,7 @@
 
 > 1) public class AutomaticGun extends Pistol, public AutomaticGun2(int ammo, int rateOfFire)
 и public class AutomaticGun3 extends Weapon2.
+
 **1. Отсутствуют фигурные скобки в нескольких условиях if.**
 
 &nbsp;

@@ -144,3 +144,146 @@ if (capacity < 0) {
         shoot(1);
     }
 ```
+
+&nbsp;
+
+> 3) public class Pistol2 extends Weapon.
+1. Отсутствуют фигурные скобки в нескольких условиях if.
+Старый код:
+```Java
+      if (capacity < 0)
+            throw new IllegalArgumentException("Вместимость не может быть отрицательной");
+```
+
+&nbsp;
+
+```Java
+        if (getAmmo())
+            System.out.println("Бах!");
+        else
+            System.out.println("Клац!");
+```
+
+&nbsp;
+
+```Java
+       if (times < 0)
+            throw new IllegalArgumentException("Количество выстрелов не может быть отрицательным");
+```
+
+&nbsp;
+
+Исправление:
+```Java
+      if (capacity < 0) {
+            throw new IllegalArgumentException("Вместимость не может быть отрицательной");
+        }
+```
+
+&nbsp;
+
+```Java
+        if (getAmmo()) {
+            System.out.println("Бах!");
+        }
+        else {
+            System.out.println("Клац!");
+        }
+```
+
+&nbsp;
+
+```Java
+       if (times < 0) {
+            throw new IllegalArgumentException("Количество выстрелов не может быть отрицательным");
+        }
+```
+
+&nbsp;
+
+2. else должен находиться на той же строке что и }.
+Старый код:
+```Java
+      }
+        else {
+            load(capacity);
+            return bulletsToLoad - spaceleft;
+        }
+```
+
+&nbsp;
+
+Новый код:
+```Java
+      } else {
+            load(capacity);
+            return bulletsToLoad - spaceleft;
+        }
+```
+
+&nbsp;
+
+> 4) public class Pistol3 extends Weapon2.
+1. Отсутствуют фигурные скобки в нескольких условиях if.
+Старый код:
+```Java
+      if (capacity < 0)
+            throw new IllegalArgumentException("Вместимость не может быть отрицательной");
+```
+
+&nbsp;
+
+```Java
+       if (times < 0)
+            throw new IllegalArgumentException("Количество выстрелов не может быть отрицательным");
+```
+
+&nbsp;
+
+```Java
+      if (bulletsToLoad < 0)
+            throw new IllegalArgumentException("Количество патронов не может быть отрицательным");
+```
+
+&nbsp;
+
+```Java
+       for (int i = 0; i < times; i++)
+            shoot();
+```
+
+&nbsp;
+
+Исправление:
+```Java
+      if (capacity < 0) {
+            throw new IllegalArgumentException("Вместимость не может быть отрицательной");
+        }
+```
+
+&nbsp;
+
+
+```Java
+       if (times < 0) {
+            throw new IllegalArgumentException("Количество выстрелов не может быть отрицательным");
+        }
+```
+
+&nbsp;
+
+```Java
+if (bulletsToLoad < 0) {
+            throw new IllegalArgumentException("Количество патронов не может быть отрицательным");
+        }
+```
+
+&nbsp;
+
+```Java
+       for (int i = 0; i < times; i++) {
+            shoot();
+        }
+```
+
+&nbsp;

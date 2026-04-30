@@ -21,15 +21,14 @@
 9 попыток
 ___
 
-1. Несоответствие имен фунций стилю
+### 1. Несоответствие имен фунций стилю
 
-Проблема:
-По код-стайлу названия функции должны использовать стиль
-lower_case_with_underscores.
+**Проблема:**  
+Имена функций не соответствуют стилю `lower_case_with_underscores`.
 
-Исправление:
- - string shuffleWord(...) -> string shuffle_word(...)
- - void processWord(...) -> void process_word(...)
+**Исправление:**
+- `shuffleWord(...) -> shuffle_word(...)`
+- `processWord(...) -> process_word(...)`
 
 &nbsp;
 

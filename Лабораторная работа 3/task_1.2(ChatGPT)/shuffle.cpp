@@ -1,6 +1,6 @@
 #include "shuffle.h"
 
-#include <regex> // FIX_ME: библиотека для функции проверки ввода.
+#include <regex> // FIX_ME: Р±РёР±Р»РёРѕС‚РµРєР° РґР»СЏ С„СѓРЅРєС†РёРё РїСЂРѕРІРµСЂРєРё РІРІРѕРґР°.
 #include <algorithm>
 #include <random>
 #include <iostream>
@@ -26,15 +26,15 @@ void process_word(const std::string& word) {
     count++;
   } while (shuffled != word);
 
-  std::cout << count << " попыток" << std::endl;
+  std::cout << count << " РїРѕРїС‹С‚РѕРє" << std::endl;
 }
 
-// FIX_ME: реализация добавленной функции проверки ввода.
+// FIX_ME: СЂРµР°Р»РёР·Р°С†РёСЏ РґРѕР±Р°РІР»РµРЅРЅРѕР№ С„СѓРЅРєС†РёРё РїСЂРѕРІРµСЂРєРё РІРІРѕРґР°.
 bool is_word_valid(const std::string& word) {
-  static const std::regex pattern("^[A-Za-zА-Яа-яЁё]+$");
+  static const std::regex pattern("^[A-Za-zРђ-РЇР°-СЏРЃС‘]+$");
 
   if (!std::regex_match(word, pattern)) {
-    throw std::invalid_argument("Ошибка: только буквы (русские или английские)");
+    throw std::invalid_argument("РћС€РёР±РєР°: С‚РѕР»СЊРєРѕ Р±СѓРєРІС‹ (СЂСѓСЃСЃРєРёРµ РёР»Рё Р°РЅРіР»РёР№СЃРєРёРµ)");
   }
   return true;
 }

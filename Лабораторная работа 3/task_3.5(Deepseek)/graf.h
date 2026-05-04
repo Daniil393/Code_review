@@ -15,8 +15,8 @@ public:
   ~Graf();
 
   /*
-  FIX_ME: имена функций должны соответствовать
-  стилю lower_case_with_underscores.
+  FIX_ME: РёРјРµРЅР° С„СѓРЅРєС†РёР№ РґРѕР»Р¶РЅС‹ СЃРѕРѕС‚РІРµС‚СЃС‚РІРѕРІР°С‚СЊ
+  СЃС‚РёР»СЋ lower_case_with_underscores.
 
   std::vector<int> findCitiesWithLessTransfers(int K, int L);
   void printResult(int K, int L);
@@ -26,11 +26,11 @@ public:
 
   void print_result(int K, int L);
 
-  // FIX_ME: добавлен геттер для n.
+  // FIX_ME: РґРѕР±Р°РІР»РµРЅ РіРµС‚С‚РµСЂ РґР»СЏ n.
   int get_n() const;
 };
 
-//FIX_ME: Добавлена функция для проверки ввода.
+//FIX_ME: Р”РѕР±Р°РІР»РµРЅР° С„СѓРЅРєС†РёСЏ РґР»СЏ РїСЂРѕРІРµСЂРєРё РІРІРѕРґР°.
 void check_input(int& K, int& L, int& n);
 
 #endif

@@ -1067,7 +1067,7 @@ std::cout << "\nРезультат вычисления: " << tree.evaluate() <<
 Имена переменных не соответствуют стилю `lower_case_with_underscores`.
 
 **Исправление:**  
-- `ADD, SUB, MUL, DIV, MOD, POW ? add, sub, mul, div_, mod, pow_`
+- `ADD, SUB, MUL, DIV, MOD, POW → add, sub, mul, div_, mod, pow_`
 - `opCode → op_code`
 - `leftVal → left_val`
 - `rightVal → right_val`

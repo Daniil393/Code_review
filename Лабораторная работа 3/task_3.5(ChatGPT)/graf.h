@@ -11,8 +11,8 @@ private:
   int n;
 
   /*
-  FIX_ME: имя переменной должно
-  соответствовать стилю lower_case_with_underscores.
+  FIX_ME: РёРјСЏ РїРµСЂРµРјРµРЅРЅРѕР№ РґРѕР»Р¶РЅРѕ
+  СЃРѕРѕС‚РІРµС‚СЃС‚РІРѕРІР°С‚СЊ СЃС‚РёР»СЋ lower_case_with_underscores.
   std::vector<std::vector<int>> adjMatrix;
   */
   std::vector<std::vector<int>> adj_matrix;
@@ -21,22 +21,22 @@ public:
   Graph(int size);
 
   /*
-  FIX_ME: имя функции должно соответствовать стилю lower_case_with_underscores.
+  FIX_ME: РёРјСЏ С„СѓРЅРєС†РёРё РґРѕР»Р¶РЅРѕ СЃРѕРѕС‚РІРµС‚СЃС‚РІРѕРІР°С‚СЊ СЃС‚РёР»СЋ lower_case_with_underscores.
   void setMatrix(const std::vector<std::vector<int>>& matrix);
   */
   void set_matrix(const std::vector<std::vector<int>>& matrix);
 
   /*
-  FIX_ME: имена переменной и функции должны
-  соответствовать стилю lower_case_with_underscores.
+  FIX_ME: РёРјРµРЅР° РїРµСЂРµРјРµРЅРЅРѕР№ Рё С„СѓРЅРєС†РёРё РґРѕР»Р¶РЅС‹
+  СЃРѕРѕС‚РІРµС‚СЃС‚РІРѕРІР°С‚СЊ СЃС‚РёР»СЋ lower_case_with_underscores.
   std::vector<int> findCities(int start, int maxTransfers);
   */
   std::vector<int> find_cities(int start, int max_transfers);
 };
 
 /*
-FIX_ME: Логика решения задания выведена в отдельную функцию.
-Добавлена функция для проверки ввода.
+FIX_ME: Р›РѕРіРёРєР° СЂРµС€РµРЅРёСЏ Р·Р°РґР°РЅРёСЏ РІС‹РІРµРґРµРЅР° РІ РѕС‚РґРµР»СЊРЅСѓСЋ С„СѓРЅРєС†РёСЋ.
+Р”РѕР±Р°РІР»РµРЅР° С„СѓРЅРєС†РёСЏ РґР»СЏ РїСЂРѕРІРµСЂРєРё РІРІРѕРґР°.
 */
 void solve(int n, const std::vector<std::vector<int>>& matrix, int K, int L);
 

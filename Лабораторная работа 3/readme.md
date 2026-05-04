@@ -80,7 +80,7 @@ catch (const std::exception& e) {
 Имя функции не соответствуют стилю `lower_case_with_underscores`.
 
 **Исправление:**
-- `shuffleWord(...) ? shuffle_word(...)`
+- `shuffleWord(...) → shuffle_word(...)`
 
 &nbsp;
 
@@ -169,8 +169,8 @@ catch (const std::exception& e) {
 Имена функций не соответствуют стилю `lower_case_with_underscores`.
 
 **Исправление:**
-- `shuffleWord(...) ? shuffle_word(...)`
-- `isWordMatch(...) ? is_word_match(...)`
+- `shuffleWord(...) → shuffle_word(...)`
+- `isWordMatch(...) → is_word_match(...)`
 
 &nbsp;
 
@@ -180,7 +180,7 @@ catch (const std::exception& e) {
 Имя переменной не соответствуют стилю `lower_case_with_underscores`.
 
 **Исправление:**
-- `originalWord ? original_word`
+- `originalWord → original_word`
 
 &nbsp;
 
@@ -268,8 +268,8 @@ ___
 Имена переменных не соответствуют стилю `lower_case_with_underscores`.
 
 **Исправление:**
-- `adjMatrix ? adj_matrix`
-- `maxTransfers ? max_transfers`
+- `adjMatrix → adj_matrix`
+- `maxTransfers → max_transfers`
 
 &nbsp;
 
@@ -279,8 +279,8 @@ ___
 Имена функций не соответствуют стилю `lower_case_with_underscores`.
 
 **Исправление:**
-- `setMatrix ? set_matrix`
-- `findCities ? find_cities`
+- `setMatrix → set_matrix`
+- `findCities → find_cities`
 
 &nbsp;
 
@@ -396,8 +396,8 @@ catch (const std::exception& error) {
 Имена функций не соответствуют стилю `lower_case_with_underscores`.
 
 **Исправление:**
-- `findCitiesWithLessTransfers(...) ? find_cities_with_less_transfers(...)`
-- `printResult(...) ? print_result(...)`
+- `findCitiesWithLessTransfers(...) → find_cities_with_less_transfers(...)`
+- `printResult(...) → print_result(...)`
 
 &nbsp;
 
@@ -407,10 +407,10 @@ catch (const std::exception& error) {
 Имена переменных не соответствуют стилю `lower_case_with_underscores`.
 
 **Исправление:**
-- `currentCity ? current_city`
-- `currentTransfers ? current_transfers`
-- `nextCity ? next_city`
-- `newTransfers ? new_transfers`
+- `currentCity → current_city`
+- `currentTransfers → current_transfers`
+- `nextCity → next_city`
+- `newTransfers → new_transfers`
 
 &nbsp;
 
@@ -629,9 +629,9 @@ ___
 Имена функций не соответствуют стилю `lower_case_with_underscores`.
 
 **Исправление:**
-- `buildTree(...) ? build_tree(...)`
-- `opCode(...) ? op_code(...)`
-- `freeTree(...) ? free_tree(...)`
+- `buildTree(...) → build_tree(...)`
+- `opCode(...) → op_code(...)`
+- `freeTree(...) → free_tree(...)`
 
 &nbsp;
 
@@ -839,10 +839,10 @@ std::cout << "Преобразованное дерево: ";
 Имена функций не соответствуют стилю `lower_case_with_underscores`.
 
 **Исправление:**  
-- `loadFromFile(...) ? load_from_file(...)`
-- `transformTree() ? transform_tree()`
-- `getRoot() ? get_root()`
-- `freeTree(...) ? free_tree(...)`
+- `loadFromFile(...) → load_from_file(...)`
+- `transformTree() → transform_tree()`
+- `getRoot() → get_root()`
+- `freeTree(...) → free_tree(...)`
 
 &nbsp;
 
@@ -1054,10 +1054,10 @@ std::cout << "\nРезультат вычисления: " << tree.evaluate() <<
 Имена функций не соответствуют стилю `lower_case_with_underscores`.
 
 **Исправление:**  
-- `buildTree(...) ?  build_tree(...)`
-- `replacePower(...) ? replace_power(...)`
-- `buildFromString(...) ? build_from_string(...)`
-- `getRoot() ? get_root()`
+- `buildTree(...) →  build_tree(...)`
+- `replacePower(...) → replace_power(...)`
+- `buildFromString(...) → build_from_string(...)`
+- `getRoot() → get_root()`
 
 &nbsp;
 
@@ -1068,9 +1068,9 @@ std::cout << "\nРезультат вычисления: " << tree.evaluate() <<
 
 **Исправление:**  
 - `ADD, SUB, MUL, DIV, MOD, POW ? add, sub, mul, div_, mod, pow_`
-- `opCode ? op_code`
-- `leftVal ? left_val`
-- `rightVal ? right_val`
+- `opCode → op_code`
+- `leftVal → left_val`
+- `rightVal → right_val`
 
 &nbsp;
 

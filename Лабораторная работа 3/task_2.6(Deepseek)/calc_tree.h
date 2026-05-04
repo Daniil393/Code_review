@@ -4,12 +4,12 @@
 #include <memory>
 #include <string>
 
-//FIX_ME: отсутствовала библиотека iostream.
+//FIX_ME: РѕС‚СЃСѓС‚СЃС‚РІРѕРІР°Р»Р° Р±РёР±Р»РёРѕС‚РµРєР° iostream.
 #include <iostream>
 
 /*
-FIX_ME: имена переменных должны соответствовать
-стилю lower_case_with_underscores.
+FIX_ME: РёРјРµРЅР° РїРµСЂРµРјРµРЅРЅС‹С… РґРѕР»Р¶РЅС‹ СЃРѕРѕС‚РІРµС‚СЃС‚РІРѕРІР°С‚СЊ
+СЃС‚РёР»СЋ lower_case_with_underscores.
 
 const int ADD = -1;
 const int SUB = -2;
@@ -39,8 +39,8 @@ private:
   std::shared_ptr<TreeNode> root;
   int evaluate(const std::shared_ptr<TreeNode>& node);
   /*
-  FIX_ME: имена функций должны соответствовать
-  стилю lower_case_with_underscores.
+  FIX_ME: РёРјРµРЅР° С„СѓРЅРєС†РёР№ РґРѕР»Р¶РЅС‹ СЃРѕРѕС‚РІРµС‚СЃС‚РІРѕРІР°С‚СЊ
+  СЃС‚РёР»СЋ lower_case_with_underscores.
 
   std::shared_ptr<TreeNode> buildTree(const std::string& expr, size_t& pos);
   void replacePower(std::shared_ptr<TreeNode>& node);
@@ -54,8 +54,8 @@ public:
 
   void transform();
   /*
-  FIX_ME: имена функций должны соответствовать
-  стилю lower_case_with_underscores.
+  FIX_ME: РёРјРµРЅР° С„СѓРЅРєС†РёР№ РґРѕР»Р¶РЅС‹ СЃРѕРѕС‚РІРµС‚СЃС‚РІРѕРІР°С‚СЊ
+  СЃС‚РёР»СЋ lower_case_with_underscores.
 
   void buildFromString(const std::string& expression);
   std::shared_ptr<TreeNode> getRoot() const { return root; }
@@ -64,8 +64,8 @@ public:
   std::shared_ptr<TreeNode> get_root() const { return root; }
 
   /*
-  FIX_ME: функции для вывода дерева и декодирования операций
-  вместо printTree и print.
+  FIX_ME: С„СѓРЅРєС†РёРё РґР»СЏ РІС‹РІРѕРґР° РґРµСЂРµРІР° Рё РґРµРєРѕРґРёСЂРѕРІР°РЅРёСЏ РѕРїРµСЂР°С†РёР№
+  РІРјРµСЃС‚Рѕ printTree Рё print.
 
   void print(std::ostream& os = std::cout);
   void printTree(const std::shared_ptr<TreeNode>& node, int level, std::ostream& os);
@@ -73,7 +73,7 @@ public:
   void print_tree(const std::shared_ptr<TreeNode>& node);
   char decode_op(int val);
 
-  //FIX_ME: функция для вывода результата.
+  //FIX_ME: С„СѓРЅРєС†РёСЏ РґР»СЏ РІС‹РІРѕРґР° СЂРµР·СѓР»СЊС‚Р°С‚Р°.
   int evaluate();
 };
 

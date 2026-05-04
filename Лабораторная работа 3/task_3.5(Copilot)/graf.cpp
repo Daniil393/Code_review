@@ -7,9 +7,9 @@
 Graf::Graf(const std::string& filename) {
   std::ifstream fin(filename);
 
-  //FIX_ME: äîáàâëåíà îáğàáîòêà îøèáêè îòêğûòèÿ ôàéëà.
+  //FIX_ME: Ğ´Ğ¾Ğ±Ğ°Ğ²Ğ»ĞµĞ½Ğ° Ğ¾Ğ±Ñ€Ğ°Ğ±Ğ¾Ñ‚ĞºĞ° Ğ¾ÑˆĞ¸Ğ±ĞºĞ¸ Ğ¾Ñ‚ĞºÑ€Ñ‹Ñ‚Ğ¸Ñ Ñ„Ğ°Ğ¹Ğ»Ğ°.
   if (!fin) {
-    throw std::runtime_error("Íå óäàëîñü îòêğûòü ôàéë");
+    throw std::runtime_error("ĞĞµ ÑƒĞ´Ğ°Ğ»Ğ¾ÑÑŒ Ğ¾Ñ‚ĞºÑ€Ñ‹Ñ‚ÑŒ Ñ„Ğ°Ğ¹Ğ»");
   }
 
   fin >> n;
@@ -51,21 +51,21 @@ std::vector<int> Graf::reachable(int K, int L) {
   return result;
 }
 
-//FIX_ME: ğåàëèçàöèÿ ôóíêöèè ïğîâåğêè ââîäà.
+//FIX_ME: Ñ€ĞµĞ°Ğ»Ğ¸Ğ·Ğ°Ñ†Ğ¸Ñ Ñ„ÑƒĞ½ĞºÑ†Ğ¸Ğ¸ Ğ¿Ñ€Ğ¾Ğ²ĞµÑ€ĞºĞ¸ Ğ²Ğ²Ğ¾Ğ´Ğ°.
 void check_input(int& K, int& L, int n) {
   while (true) {
     if (!(std::cin >> K >> L)) {
-      std::cout << "Îøèáêà: K è L äîëæíû áûòü öåëûìè ÷èñëàìè\n";
+      std::cout << "ĞÑˆĞ¸Ğ±ĞºĞ°: K Ğ¸ L Ğ´Ğ¾Ğ»Ğ¶Ğ½Ñ‹ Ğ±Ñ‹Ñ‚ÑŒ Ñ†ĞµĞ»Ñ‹Ğ¼Ğ¸ Ñ‡Ğ¸ÑĞ»Ğ°Ğ¼Ğ¸\n";
       std::cin.clear();
       std::cin.ignore(10000, '\n');
 
-      std::cout << "Ââåäèòå K è L: ";
+      std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ K Ğ¸ L: ";
       continue;
     }
 
     if (K < 1 || K > n) {
-      std::cout << "Îøèáêà: íîìåğ ãîğîäà K âíå äîïóñòèìîãî äèàïàçîíà\n";
-      std::cout << "Ââåäèòå K è L: ";
+      std::cout << "ĞÑˆĞ¸Ğ±ĞºĞ°: Ğ½Ğ¾Ğ¼ĞµÑ€ Ğ³Ğ¾Ñ€Ğ¾Ğ´Ğ° K Ğ²Ğ½Ğµ Ğ´Ğ¾Ğ¿ÑƒÑÑ‚Ğ¸Ğ¼Ğ¾Ğ³Ğ¾ Ğ´Ğ¸Ğ°Ğ¿Ğ°Ğ·Ğ¾Ğ½Ğ°\n";
+      std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ K Ğ¸ L: ";
       continue;
     }
 

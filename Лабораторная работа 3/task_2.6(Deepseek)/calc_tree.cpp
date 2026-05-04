@@ -18,8 +18,8 @@ std::shared_ptr<TreeNode> CalcTree::build_tree(const std::string& expr, size_t& 
     expr[pos] == '/' || expr[pos] == '%' || expr[pos] == '^') {
 
     /*
-    FIX_ME: имя переменной должно соответствовать
-    стилю lower_case_with_underscores.
+    FIX_ME: РёРјСЏ РїРµСЂРµРјРµРЅРЅРѕР№ РґРѕР»Р¶РЅРѕ СЃРѕРѕС‚РІРµС‚СЃС‚РІРѕРІР°С‚СЊ
+    СЃС‚РёР»СЋ lower_case_with_underscores.
 
     int opCode;
     switch (expr[pos]) {
@@ -70,8 +70,8 @@ int CalcTree::evaluate(const std::shared_ptr<TreeNode>& node) {
   }
 
   /*
-  FIX_ME: имена переменных должны соответствовать
-  стилю lower_case_with_underscores.
+  FIX_ME: РёРјРµРЅР° РїРµСЂРµРјРµРЅРЅС‹С… РґРѕР»Р¶РЅС‹ СЃРѕРѕС‚РІРµС‚СЃС‚РІРѕРІР°С‚СЊ
+  СЃС‚РёР»СЋ lower_case_with_underscores.
 
   int leftVal = evaluate(node->left);
   int rightVal = evaluate(node->right);
@@ -105,7 +105,7 @@ int CalcTree::evaluate(const std::shared_ptr<TreeNode>& node) {
 void CalcTree::replace_power(std::shared_ptr<TreeNode>& node) {
 
   /*
-  FIX_ME: не фигурных скобок в теле условия if.
+  FIX_ME: РЅРµ С„РёРіСѓСЂРЅС‹С… СЃРєРѕР±РѕРє РІ С‚РµР»Рµ СѓСЃР»РѕРІРёСЏ if.
 
   if (!node) return;
   */
@@ -133,10 +133,10 @@ void CalcTree::transform() {
 }
 
 /*
-FIX_ME: дерево выводилось некорректно
-(выводилась его структура, а не математическая запись).
+FIX_ME: РґРµСЂРµРІРѕ РІС‹РІРѕРґРёР»РѕСЃСЊ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕ
+(РІС‹РІРѕРґРёР»Р°СЃСЊ РµРіРѕ СЃС‚СЂСѓРєС‚СѓСЂР°, Р° РЅРµ РјР°С‚РµРјР°С‚РёС‡РµСЃРєР°СЏ Р·Р°РїРёСЃСЊ).
 
-Удалены функции printTree и print.
+РЈРґР°Р»РµРЅС‹ С„СѓРЅРєС†РёРё printTree Рё print.
 */
 void CalcTree::print_tree(const std::shared_ptr<TreeNode>& node) {
 
@@ -168,7 +168,7 @@ char CalcTree::decode_op(int val) {
   return '?';
 }
 
-//FIX_ME: реализация функции для вычисления результата выражения.
+//FIX_ME: СЂРµР°Р»РёР·Р°С†РёСЏ С„СѓРЅРєС†РёРё РґР»СЏ РІС‹С‡РёСЃР»РµРЅРёСЏ СЂРµР·СѓР»СЊС‚Р°С‚Р° РІС‹СЂР°Р¶РµРЅРёСЏ.
 int CalcTree::evaluate() {
   return evaluate(root);
 }

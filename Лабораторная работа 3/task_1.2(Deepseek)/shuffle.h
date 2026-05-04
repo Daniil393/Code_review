@@ -4,21 +4,21 @@
 #include <string>
 
 /*
-FIX_ME: имя функции должно соответствовать стилю lower_case_with_underscores.
+FIX_ME: РёРјСЏ С„СѓРЅРєС†РёРё РґРѕР»Р¶РЅРѕ СЃРѕРѕС‚РІРµС‚СЃС‚РІРѕРІР°С‚СЊ СЃС‚РёР»СЋ lower_case_with_underscores.
 std::string shuffleWord(const std::string& word);
 */
 std::string shuffle_word(const std::string& word);
 
 /*
-FIX_ME: имя функции должно соответствовать стилю lower_case_with_underscores.
+FIX_ME: РёРјСЏ С„СѓРЅРєС†РёРё РґРѕР»Р¶РЅРѕ СЃРѕРѕС‚РІРµС‚СЃС‚РІРѕРІР°С‚СЊ СЃС‚РёР»СЋ lower_case_with_underscores.
 bool isWordMatch(const std::string& original, const std::string& shuffled);
 */
 bool is_word_match(const std::string& original, const std::string& shuffled);
 
-// FIX_ME: добавлена функция для проверки ввода.
+// FIX_ME: РґРѕР±Р°РІР»РµРЅР° С„СѓРЅРєС†РёСЏ РґР»СЏ РїСЂРѕРІРµСЂРєРё РІРІРѕРґР°.
 bool is_word_valid(const std::string& word);
 
-// FIX_ME: добавлена функция для вывода слов и подсчета попыток.
+// FIX_ME: РґРѕР±Р°РІР»РµРЅР° С„СѓРЅРєС†РёСЏ РґР»СЏ РІС‹РІРѕРґР° СЃР»РѕРІ Рё РїРѕРґСЃС‡РµС‚Р° РїРѕРїС‹С‚РѕРє.
 void process_word(const std::string& original_word);
 
 #endif

@@ -25,7 +25,7 @@ public:
   ~CalcTree();
 
   /*
-  FIX_ME: имена функций должны соответствовать стилю lower_case_with_underscores.
+  FIX_ME: РёРјРµРЅР° С„СѓРЅРєС†РёР№ РґРѕР»Р¶РЅС‹ СЃРѕРѕС‚РІРµС‚СЃС‚РІРѕРІР°С‚СЊ СЃС‚РёР»СЋ lower_case_with_underscores.
 
   void loadFromFile(const std::string& filename);
   void transformTree();
@@ -37,10 +37,10 @@ public:
   Node* get_root();
   void free_tree(Node* node);
 
-  //FIX_ME: добавлена функция вывода результата вычисления.
+  //FIX_ME: РґРѕР±Р°РІР»РµРЅР° С„СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° СЂРµР·СѓР»СЊС‚Р°С‚Р° РІС‹С‡РёСЃР»РµРЅРёСЏ.
   int evaluate();
 
-  //FIX_ME: функции для вывода дерева и декодирования операций.
+  //FIX_ME: С„СѓРЅРєС†РёРё РґР»СЏ РІС‹РІРѕРґР° РґРµСЂРµРІР° Рё РґРµРєРѕРґРёСЂРѕРІР°РЅРёСЏ РѕРїРµСЂР°С†РёР№.
   void print_tree(Node* root);
   char decode_op(int val);
 };

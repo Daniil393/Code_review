@@ -13,13 +13,13 @@ public:
   Graf(const std::string& filename);
   std::vector<int> reachable(int K, int L);
 
-  // FIX_ME: добавлен метод для получения количества городов
+  // FIX_ME: РґРѕР±Р°РІР»РµРЅ РјРµС‚РѕРґ РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ РєРѕР»РёС‡РµСЃС‚РІР° РіРѕСЂРѕРґРѕРІ
   int get_size() const {
     return n;
   }
 };
 
-// FIX_ME: Добавлена функция для проверки ввода.
+// FIX_ME: Р”РѕР±Р°РІР»РµРЅР° С„СѓРЅРєС†РёСЏ РґР»СЏ РїСЂРѕРІРµСЂРєРё РІРІРѕРґР°.
 
 void check_input(int& K, int& L, int n);
 
